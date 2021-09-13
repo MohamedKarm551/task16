@@ -1,0 +1,251 @@
+    *,
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #111;
+        font-family: "Alegreya";
+    }
+    
+    .nav {
+        display: flex;
+    }
+    
+    .nav .nav-img {}
+    
+    .nav .nav-img img {
+        width: 50%;
+        padding: 20px;
+    }
+    
+    .list-item .link-i {
+        position: relative;
+        left: 100px;
+        width: 28px;
+    }
+    
+    .list-item img {
+        width: 45px;
+        height: 54px;
+    }
+    
+    .nav .list-item:hover>.nav-links {
+        left: -130px;
+        opacity: 1;
+    }
+    
+    .nav .list-item img {
+        background-color: black;
+        cursor: pointer;
+        border: 1px solid gold;
+    }
+    
+    .nav .nav-links {
+        display: flex;
+        position: relative;
+        left: 100%;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        opacity: 0;
+    }
+    
+    .nav .nav-links ul {
+        list-style: none;
+        display: inline;
+        width: 85%;
+        padding: 21px;
+        margin: 23px;
+    }
+    
+    .nav .nav-links li {
+        padding: 20px;
+        position: relative;
+    }
+    
+    .nav .nav-links li a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: large;
+        font-weight: bold;
+    }
+    
+    .nav .nav-links li .cont {
+        text-shadow: 1px 1px #2196F3;
+    }
+    
+    .nav .itmes {
+        opacity: 0;
+        color: wheat;
+        font-size: larger;
+        font-weight: 500;
+        left: 160px;
+        background: rebeccapurple;
+        position: absolute;
+        border-radius: 10px;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+    }
+    
+    li:hover {
+        background: rebeccapurple;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+    
+    li:hover .itmes {
+        opacity: 1;
+        left: -110px;
+    }
+    /* loading style */
+    
+    .loading {
+        text-align: center;
+        margin: 100px auto 100px auto;
+        background: #111;
+        color: wheat;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 500px;
+        align-items: center;
+    }
+    
+    .loading h1 {
+        position: relative;
+    }
+    
+    .loading span {
+        border: 1px solid white;
+        border-radius: 20px;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        animation: animspan 5s infinite;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        -webkit-animation: animspan 5s infinite;
+    }
+    
+    @keyframes animspan {
+        0% {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .loading span:nth-child(1) {
+        border-radius: 30% 70% 58% 42% / 30% 26% 74% 70%;
+        -webkit-border-radius: 30% 70% 58% 42% / 30% 26% 74% 70%;
+        -moz-border-radius: 30% 70% 58% 42% / 30% 26% 74% 70%;
+        -ms-border-radius: 30% 70% 58% 42% / 30% 26% 74% 70%;
+        -o-border-radius: 30% 70% 58% 42% / 30% 26% 74% 70%;
+        animation-duration: 5s;
+    }
+    
+    .loading span:nth-child(2) {
+        animation-duration: 3s;
+        animation-direction: reverse;
+        border-radius: 67% 33% 58% 42% / 30% 79% 21% 70%;
+        -webkit-border-radius: 67% 33% 58% 42% / 30% 79% 21% 70%;
+        -moz-border-radius: 67% 33% 58% 42% / 30% 79% 21% 70%;
+        -ms-border-radius: 67% 33% 58% 42% / 30% 79% 21% 70%;
+        -o-border-radius: 67% 33% 58% 42% / 30% 79% 21% 70%;
+    }
+    
+    .loading span:nth-child(3) {
+        border-radius: 24% 76% 58% 42% / 59% 17% 83% 41%;
+        -webkit-border-radius: 24% 76% 58% 42% / 59% 17% 83% 41%;
+        -moz-border-radius: 24% 76% 58% 42% / 59% 17% 83% 41%;
+        -ms-border-radius: 24% 76% 58% 42% / 59% 17% 83% 41%;
+        -o-border-radius: 24% 76% 58% 42% / 59% 17% 83% 41%;
+        animation-duration: 4s;
+        animation-direction: reverse;
+    }
+    
+    @media screen and (min-width: 501px) {
+        body {
+            background-color: #282c34;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav .list-item img {
+            display: none;
+        }
+        .nav .nav-links {
+            position: relative;
+            left: 0;
+            opacity: 1;
+            transition: all 1s;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+        }
+        .nav .nav-links ul {
+            list-style: none;
+            display: inline-flex;
+            width: 43%;
+            padding: 21px;
+        }
+        .nav .nav-links ul li:hover {
+            background: gold;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+        }
+        .nav .nav-img {
+            width: 50%;
+        }
+        .nav .nav-img img {
+            width: 100%;
+            padding: 20px;
+        }
+        .nav .itmes {
+            display: block !important;
+            background: red;
+            width: 100% !important;
+            text-align: center;
+        }
+        /* li:hover .itmes {
+            opacity: 1;
+            /* مش راضيه تتعمل ليفت  */
+        /* left: 0;
+        }  */
+        .nav .list-item:hover>.nav-links {
+            left: 0;
+            opacity: 1;
+        }
+        .nav-links ul li:hover .itmes {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+        }
+    }
